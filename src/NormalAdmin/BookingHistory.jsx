@@ -39,9 +39,9 @@ export default function BookingHistory() {
           <p>
             <strong>Location:</strong> {booking.boatId?.location || "-"}
           </p>
-          <p>
+          {/* <p>
             <strong>Destination:</strong> {booking.boatId?.destination || "-"}
-          </p>
+          </p> */}
           <p>
             <strong>Booking Date:</strong>{" "}
             {booking.date
