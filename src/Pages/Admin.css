@@ -1,0 +1,358 @@
+/* Admin Dashboard Container */
+.admin-container {
+  width: 100%;
+  padding: 30px 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Main Title */
+.admin-container h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Profile Section */
+.profile-section {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #3498db;
+}
+
+.profile-section h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.profile-info p {
+  color: #555;
+  font-size: 1rem;
+  margin: 0;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border-left: 3px solid #27ae60;
+}
+
+.profile-info p strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Error Messages */
+.error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 4px solid #e74c3c;
+  font-weight: 500;
+}
+
+/* Loading Message */
+.loading-message {
+  text-align: center;
+  color: #3498db;
+  font-size: 1.1rem;
+  padding: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* No Boats Message */
+.no-data-message {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Boats Section */
+.boats-section {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.boats-section h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table thead {
+  background-color: #34495e;
+  color: white;
+}
+
+table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ecf0f1;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Table Images */
+table img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+table img:hover {
+  transform: scale(1.1);
+}
+
+/* Delete Button */
+table button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+table button:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+table button:active {
+  transform: translateY(0);
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-badge.active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Horizontal Divider */
+hr {
+  margin: 40px 0;
+  border: none;
+  border-top: 2px solid #ecf0f1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .admin-container {
+    padding: 20px 15px;
+  }
+
+  .admin-container h1 {
+    font-size: 2rem;
+  }
+
+  table th {
+    font-size: 0.85rem;
+    padding: 12px 10px;
+  }
+
+  table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+
+  table img {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 15px 10px;
+  }
+
+  .admin-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .profile-section {
+    padding: 20px;
+  }
+
+  .profile-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .profile-info {
+    grid-template-columns: 1fr;
+  }
+
+  .boats-section {
+    padding: 15px;
+    overflow-x: auto;
+  }
+
+  .boats-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  table th {
+    padding: 10px 5px;
+    font-size: 0.75rem;
+  }
+
+  table td {
+    padding: 8px 5px;
+  }
+
+  table img {
+    max-width: 60px;
+  }
+
+  table button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-container {
+    padding: 10px 5px;
+  }
+
+  .admin-container h1 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .profile-section {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .profile-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .profile-info p {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .boats-section {
+    padding: 10px;
+  }
+
+  .boats-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  table {
+    font-size: 0.7rem;
+  }
+
+  table th,
+  table td {
+    padding: 5px 3px;
+  }
+
+  table img {
+    max-width: 50px;
+  }
+
+  table button {
+    padding: 5px 8px;
+    font-size: 0.7rem;
+  }
+
+  .error-message {
+    padding: 10px 15px;
+  }
+}

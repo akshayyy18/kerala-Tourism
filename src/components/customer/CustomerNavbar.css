@@ -1,0 +1,127 @@
+.customer-navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.login-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-menu {
+  position: absolute;
+  top: 45px;
+  right: 80px;
+  width: 140px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.login-menu button {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.login-menu button:hover {
+  background: #f2f2f2;
+}
+
+.customer-logo {
+  font-size: 27px;
+  font-weight: 700;
+  color: #167d75;
+  cursor: pointer;
+}
+
+.customer-nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.customer-nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.customer-nav-links a:hover {
+  color: #167d75;
+}
+
+.customer-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.customer-name {
+  font-size: 15px;
+  color: #444;
+}
+.nav-bookings-btn {
+  border: none;
+  background-color: transparent;
+  font-weight: 550;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #167d75;
+  border: none;
+  padding: 5px;
+  width: 70px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-btn {
+  background-color: 167d75;
+  border: none;
+  padding: 10px;
+  width: 70px;
+  color: gray;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-bookings-btn a:hover {
+  color: #167d75;
+}
+
+.logout-btn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 7px;
+  background: #167d75;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background: #105f59;
+}

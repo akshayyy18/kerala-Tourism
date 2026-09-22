@@ -1,0 +1,142 @@
+.admin-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 76px;
+  box-sizing: border-box;
+  padding: 12px max(4vw, 24px);
+  background: #243447;
+  color: white;
+  box-shadow: 0 4px 18px rgba(25, 42, 59, 0.18);
+}
+
+.admin-navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: max-content;
+}
+
+.admin-brand-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 4px;
+  background: #3498db;
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.admin-navbar-brand h2 {
+  margin: 0;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.admin-navbar-brand div span {
+  display: block;
+  margin-top: 3px;
+  color: #aebdca;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admin-navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.admin-navbar-links a {
+  border-bottom: 2px solid transparent;
+  padding: 12px 11px 10px;
+  color: #dce6ed;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.admin-navbar-links a:hover,
+.admin-navbar-links a:focus-visible {
+  border-color: #5dade2;
+  color: white;
+  outline: none;
+}
+
+.admin-logout-button {
+  margin-left: 9px;
+  border: 1px solid #e67e22;
+  border-radius: 3px;
+  padding: 10px 15px;
+  background: #e67e22;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.admin-logout-button:hover,
+.admin-logout-button:focus-visible {
+  border-color: #d35400;
+  background: #d35400;
+  outline: none;
+}
+
+@media (max-width: 900px) {
+  .admin-navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 24px;
+  }
+
+  .admin-navbar-links {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+}
+
+@media (max-width: 560px) {
+  .admin-navbar {
+    padding: 13px 16px;
+  }
+
+  .admin-navbar-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+    overflow: visible;
+  }
+
+  .admin-navbar-links a {
+    padding: 9px 4px;
+    text-align: center;
+    font-size: 0.76rem;
+  }
+
+  .admin-logout-button {
+    grid-column: 1 / -1;
+    margin: 4px 0 0;
+    width: 100%;
+  }
+}

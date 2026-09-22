@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+
+.contact-page {
+  --ink: #12343b;
+  --muted: #5d7477;
+  --teal: #087f8c;
+  --teal-dark: #075b68;
+  --aqua: #dff4f0;
+  --sand: #f8f4e9;
+  color: var(--ink);
+  background: #fffdf8;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+}
+
+.contact-hero {
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 76px max(8vw, 32px);
+  box-sizing: border-box;
+  overflow: hidden;
+  background:
+    linear-gradient(108deg, rgba(7, 72, 82, 0.95), rgba(8, 127, 140, 0.74)),
+    radial-gradient(circle at 80% 20%, #7cd7d1 0, #188e9a 35%, #075b68 100%);
+  color: white;
+}
+
+.contact-hero-content {
+  max-width: 700px;
+  animation: contact-rise 650ms ease-out both;
+}
+
+.contact-kicker {
+  margin: 0 0 18px;
+  color: #8be0d5;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.contact-hero h1 {
+  max-width: 680px;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  line-height: 1.02;
+}
+
+.contact-hero-content > p:last-child {
+  max-width: 570px;
+  margin: 26px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.contact-hero-stamp {
+  width: 150px;
+  height: 150px;
+  display: grid;
+  flex: 0 0 150px;
+  place-items: center;
+  align-content: center;
+  gap: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  outline: 1px solid rgba(255, 255, 255, 0.25);
+  outline-offset: 9px;
+  color: #fff;
+  text-align: center;
+  transform: rotate(8deg);
+}
+
+.contact-hero-stamp span {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.3rem;
+}
+
+.contact-hero-stamp small {
+  font-size: 0.62rem;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-main-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(42px, 8vw, 120px);
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 92px max(5vw, 32px);
+}
+
+.contact-details h2,
+.contact-questions h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1.1;
+}
+
+.contact-details .contact-kicker,
+.contact-questions .contact-kicker {
+  color: var(--teal);
+}
+
+.contact-intro {
+  max-width: 410px;
+  margin: 20px 0 40px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.contact-info-list {
+  display: grid;
+  gap: 22px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.contact-info-item:hover strong {
+  color: var(--teal);
+}
+
+.contact-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  flex: 0 0 38px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--aqua);
+  color: var(--teal-dark);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.contact-info-item span:last-child {
+  display: grid;
+  gap: 3px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contact-info-item strong,
+.contact-hours strong {
+  color: var(--ink);
+  font-size: 0.84rem;
+}
+
+.contact-hours {
+  display: grid;
+  gap: 5px;
+  margin-top: 42px;
+  padding-top: 23px;
+  border-top: 1px solid #dce7e2;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 18px;
+  row-gap: 10px;
+  padding: 34px;
+  border-top: 4px solid var(--teal);
+  background: var(--sand);
+  box-shadow: 0 14px 34px rgba(18, 52, 59, 0.08);
+}
+
+.contact-form-heading {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.contact-form-heading span {
+  color: var(--coral, #e9795b);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.contact-form h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+}
+
+.contact-form label {
+  margin-top: 7px;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  grid-column: span 1;
+  padding: 12px 13px;
+  border: 1px solid #d3dfda;
+  border-radius: 3px;
+  outline: none;
+  background: #fffdf8;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.88rem;
+}
+
+.contact-form label:nth-of-type(3),
+.contact-form textarea,
+.contact-submit,
+.contact-success {
+  grid-column: 1 / -1;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(8, 127, 140, 0.13);
+}
+
+.contact-submit {
+  justify-self: start;
+  margin-top: 10px;
+  padding: 14px 21px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--teal-dark);
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.83rem;
+  font-weight: 700;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.contact-submit span {
+  margin-left: 10px;
+  font-size: 1.1rem;
+}
+
+.contact-submit:hover {
+  background: var(--teal);
+  transform: translateY(-2px);
+}
+
+.contact-success {
+  margin: 2px 0 0;
+  color: #277052;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.contact-questions {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 64px;
+  padding: 78px max(8vw, 32px);
+  background: var(--aqua);
+}
+
+.contact-question-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.contact-question-grid article {
+  padding-left: 18px;
+  border-left: 2px solid rgba(8, 127, 140, 0.4);
+}
+
+.contact-question-grid h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.contact-question-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.65;
+}
+
+.contact-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px max(8vw, 32px);
+  background: #082f38;
+  color: white;
+}
+
+.contact-footer strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.3rem;
+}
+
+.contact-footer span {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.85rem;
+}
+
+@keyframes contact-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 820px) {
+  .contact-main-section,
+  .contact-questions {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-question-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .contact-hero {
+    min-height: 440px;
+    padding: 62px 24px;
+  }
+
+  .contact-hero-stamp {
+    display: none;
+  }
+
+  .contact-main-section,
+  .contact-questions {
+    padding: 64px 24px;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+    padding: 25px 20px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
+  .contact-form label,
+  .contact-form label:nth-of-type(3),
+  .contact-submit,
+  .contact-success {
+    grid-column: 1;
+  }
+
+  .contact-question-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .contact-footer {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-hero-content,
+  .contact-submit {
+    animation: none;
+    transition: none;
+  }
+}

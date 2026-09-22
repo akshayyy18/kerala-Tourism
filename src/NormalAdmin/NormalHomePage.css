@@ -1,0 +1,109 @@
+.normal-home-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f6fbf9 0%, #eef7f6 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+}
+
+.normal-home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 20px 60px;
+}
+
+.normal-home-header {
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.normal-home-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.normal-home-header p {
+  margin: 10px auto 0;
+  max-width: 650px;
+  color: #475569;
+  font-size: 1rem;
+}
+
+.normal-home-table-wrap {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(15, 118, 110, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.normal-home-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.normal-home-table thead {
+  background: linear-gradient(135deg, #0f766e 0%, #10b981 100%);
+}
+
+.normal-home-table th,
+.normal-home-table td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.normal-home-table th {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.normal-home-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.normal-home-table tbody tr:hover {
+  background: #f8fffd;
+}
+
+.normal-home-table tbody td {
+  font-size: 0.96rem;
+  color: #334155;
+}
+
+.normal-home-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.empty-state {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #dfe7e5;
+  border-radius: 18px;
+  padding: 38px 20px;
+  text-align: center;
+  color: #475569;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
+}
+
+.empty-state h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .normal-home-container {
+    padding: 24px 14px 40px;
+  }
+
+  .normal-home-table-wrap {
+    overflow-x: auto;
+  }
+
+  .normal-home-table {
+    min-width: 700px;
+  }
+}

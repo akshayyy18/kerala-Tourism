@@ -1,0 +1,215 @@
+.boats-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f5fbf9 0%, #edf7f2 100%);
+  color: #1f2937;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.boats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 20px 60px;
+}
+
+.boats-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.boats-title {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.boats-subtitle {
+  margin: 8px 0 0;
+  color: #475569;
+  font-size: 1rem;
+}
+
+.boats-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-boat-btn,
+.boat-action-btn,
+.boat-delete-btn {
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.add-boat-btn {
+  background: linear-gradient(135deg, #0ea5a4 0%, #10b981 100%);
+  color: #fff;
+  padding: 14px 22px;
+  font-size: 0.96rem;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+}
+
+.add-boat-btn:hover,
+.boat-action-btn:hover,
+.boat-delete-btn:hover {
+  transform: translateY(-2px);
+}
+
+.boat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 24px;
+}
+
+.boat-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(15, 118, 110, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.boat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
+}
+
+.boat-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #dff8f3 0%, #e2e8f0 100%);
+}
+
+.boat-card-body {
+  padding: 20px 18px 18px;
+}
+
+.boat-card-title {
+  margin: 0 0 16px;
+  font-size: 1.6rem;
+  color: #0f172a;
+}
+
+.boat-details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.boat-details-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.94rem;
+  color: #334155;
+  border-bottom: 1px dashed #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.boat-details-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.boat-details-list strong {
+  color: #0f172a;
+}
+
+.boat-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 16px;
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.boat-status.booked {
+  background: #fff7ed;
+  color: #9a4d00;
+}
+
+.boat-status.maintenance {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.boat-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.boat-action-btn {
+  flex: 1;
+  padding: 11px 12px;
+  background: #e0f2fe;
+  color: #0f172a;
+}
+
+.boat-delete-btn {
+  flex: 1;
+  padding: 11px 12px;
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.empty-state {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #dfe7e5;
+  border-radius: 18px;
+  padding: 48px 24px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
+}
+
+.empty-state h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .boats-container {
+    padding-top: 24px;
+  }
+
+  .boats-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .boats-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .add-boat-btn {
+    width: 100%;
+  }
+
+  .boat-actions {
+    flex-direction: column;
+  }
+}

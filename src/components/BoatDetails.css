@@ -1,0 +1,441 @@
+/* Back Button */
+.back-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  color: #0066c0;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #e8e8e8;
+  border-color: #b0b0b0;
+}
+
+/* Main Container */
+.boat-details-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+}
+
+/* Product Detail Section */
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Image Section */
+.product-image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.main-image:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Details Section */
+.product-details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-title {
+  font-size: 1.8rem;
+  color: #0f1111;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.rating-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.rating-section span {
+  color: #565959;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  width: fit-content;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  border: 1.5px solid transparent;
+}
+
+/* Available Status - Green */
+.status-badge.status-available {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+}
+
+.status-badge.status-available:hover {
+  background-color: #c3e6cb;
+  box-shadow: 0 4px 12px rgba(21, 87, 36, 0.25);
+}
+
+/* Maintenance Status - Red */
+.status-badge.status-maintenance {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+
+.status-badge.status-maintenance:hover {
+  background-color: #f5c6cb;
+  box-shadow: 0 4px 12px rgba(114, 28, 36, 0.25);
+}
+
+/* Booked Status - Yellow/Orange */
+.status-badge.status-booked {
+  background-color: #fff3cd;
+  color: #856404;
+  border-color: #ffeaa7;
+}
+
+.status-badge.status-booked:hover {
+  background-color: #ffeaa7;
+  box-shadow: 0 4px 12px rgba(133, 100, 4, 0.25);
+}
+
+/* Legacy selectors for backward compatibility */
+.status-available {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-booked {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-maintenance {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Price Section */
+.price-section {
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 15px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.price-label {
+  font-size: 0.9rem;
+  color: #565959;
+}
+
+.price-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b12704;
+}
+
+/* Key Features */
+.key-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.feature-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 15px;
+  font-size: 0.95rem;
+}
+
+.feature-label {
+  font-weight: 600;
+  color: #0f1111;
+}
+
+.feature-value {
+  color: #565959;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  min-width: 150px;
+}
+
+.btn-update {
+  background-color: #ff9900;
+  color: white;
+}
+
+.btn-update:hover {
+  background-color: #ff8c00;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Description Section */
+.description-section {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 25px;
+  margin-top: 25px;
+}
+
+.description-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f1111;
+  margin-bottom: 12px;
+}
+
+.description-text {
+  color: #565959;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Info Section */
+.info-section {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 25px;
+  margin-top: 25px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.info-item {
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: #565959;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  color: #0f1111;
+  font-weight: 500;
+}
+
+/* Loading */
+.loading-container {
+  text-align: center;
+  padding: 60px 20px;
+  color: #0066c0;
+  font-size: 1.1rem;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f0f0f0;
+  border-top-color: #0066c0;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 15px;
+}
+.booknow {
+  background-color: yellowgreen;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.booknow:hover:not(:disabled) {
+  background-color: #9acd32;
+  box-shadow: 0 4px 12px rgba(154, 205, 50, 0.3);
+  transform: translateY(-2px);
+}
+
+.booknow:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(154, 205, 50, 0.2);
+}
+
+.booknow:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.booknow:disabled:hover {
+  background-color: #cccccc;
+  box-shadow: none;
+  transform: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .product-detail {
+    gap: 30px;
+  }
+
+  .product-title {
+    font-size: 1.5rem;
+  }
+
+  .price-value {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .boat-details-wrapper {
+    padding: 15px;
+  }
+
+  .product-detail {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .product-title {
+    font-size: 1.3rem;
+  }
+
+  .main-image {
+    max-height: 400px;
+  }
+
+  .price-value {
+    font-size: 1.5rem;
+  }
+
+  .feature-row {
+    grid-template-columns: 100px 1fr;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .boat-details-wrapper {
+    padding: 10px;
+  }
+
+  .product-title {
+    font-size: 1.1rem;
+  }
+
+  .main-image {
+    max-height: 300px;
+  }
+
+  .price-value {
+    font-size: 1.3rem;
+  }
+
+  .feature-row {
+    grid-template-columns: 90px 1fr;
+    gap: 8px;
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+  }
+
+  .description-title {
+    font-size: 1rem;
+  }
+
+  .description-text {
+    font-size: 0.85rem;
+  }
+}
