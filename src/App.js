@@ -31,6 +31,8 @@ import AdminRegistration from "./components/admin/AdminRegistration";
 import ViewCustomerHistory from "./components/admin/ViewCustomerHistory";
 import CustomerPage from "./NormalAdmin/CustomerPage";
 import BookingHistory from "./NormalAdmin/BookingHistory";
+import AdminCustomerDetails from "./components/admin/AdminCustomerDetails";
+import SeatSelection from "./Pages/customer/SeatSelection";
 
 export default function App() {
   return (
@@ -67,6 +69,8 @@ export default function App() {
         <Route path="/admin/viewCustomer/:id" element={<ViewCustomerHistory/>}/>
         <Route path="/customerPage" element={<CustomerPage/>}/>
         <Route path="/admin/bookingData/:id" element={<BookingHistory/>}/>
+        <Route path="/admin/sigleCustomerPage/:id" element={<AdminCustomerDetails/>}/>
+        <Route path="/customer/seatSelection/:id" element={<SeatSelection/>}/>
       </Routes>
     </div>
   );

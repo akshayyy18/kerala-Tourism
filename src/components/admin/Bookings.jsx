@@ -85,6 +85,7 @@ export default function Bookings() {
               <th>Passengers</th>
               <th>Amount</th>
               <th>Status</th>
+              <th>SeatNo</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -113,6 +114,8 @@ export default function Bookings() {
                     <option value="Completed">Completed</option>
                   </select>
                 </td>
+                <td>{book.seatIds?.map((seat)=> seat.seatNumber).join(",")}</td>
+                
 
                 <td>
                   <button

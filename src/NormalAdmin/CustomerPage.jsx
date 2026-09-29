@@ -36,7 +36,7 @@ export default function CustomerPage() {
                 <th>Name</th>
                 <th>Email</th>
                 <th>Mobile Number</th>
-                <th>View Bookings</th>
+               {permissions.includes("manageCustomers") && <th>View Bookings</th>}
             </tr>
         </thead>
         <tbody>
@@ -47,7 +47,7 @@ export default function CustomerPage() {
                 <td>{customer.name}</td>
                 <td>{customer.email}</td>
                 <td>{customer.mobileNumber}</td>
-                {<td><button onClick={()=>navigate(`/admin/bookingData/${customer._id}`)}>View Details</button></td>}
+                {permissions.includes("manageCustomers") && <td><button onClick={()=>navigate(`/admin/bookingData/${customer._id}`)}>View Details</button></td>}
             </tr>
                 ))
             }

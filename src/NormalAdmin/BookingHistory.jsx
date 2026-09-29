@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import api from "../Services/api";
 import { useParams } from "react-router-dom";
 
@@ -6,6 +6,10 @@ export default function BookingHistory() {
   const { id } = useParams();
   const [data, setData] = useState([]);
 
+  
+  const user = JSON.parse(localStorage.getItem("user"))
+
+  const permissions = user?.permissions || []
   const getBookings = async () => {
     try {
       const respose = await api.get(`/admin/getBookings/${id}`);
@@ -21,6 +25,25 @@ export default function BookingHistory() {
   useEffect(() => {
     getBookings();
   }, [id]);
+
+   const handleDelete = async(id)=>{
+
+     const confirmDelete = window.confirm(
+      "Are you sure you want to delete this Booking?",
+    );
+
+    if (!confirmDelete) {
+      return;
+    }
+
+    const delet = await api.delete(`/admin/deleteCustomer/${id}`)
+
+    console.log("deleted Successfull", delet.data)
+
+    setData((previousData)=> previousData.filter((customer)=> customer._id !== id))
+
+    alert("customer Deleted Successfull")
+  }
 
   return (
     <div>
@@ -60,6 +83,7 @@ export default function BookingHistory() {
           <p>
             <strong>Status:</strong> {booking.bookingStatus}
           </p>
+         { permissions.includes("manageCustomers") && <button onClick={()=> handleDelete(booking._id)}>Delete Customer</button>}
 
           <hr />
         </div>

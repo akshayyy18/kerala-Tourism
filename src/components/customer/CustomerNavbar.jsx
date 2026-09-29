@@ -92,7 +92,7 @@ export default function CustomerNavbar() {
                     navigate("/admin/login");
                   }}
                 >
-                Admin
+                  Admin
                 </button>
               </div>
             )}

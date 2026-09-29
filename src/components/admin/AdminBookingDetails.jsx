@@ -32,19 +32,23 @@ export default function AdminBookingDetails() {
     <div>
       <h2>Booking Details</h2>
 
-      <p>Customer: {book.customerName}</p>
+      <p><strong>Customer: </strong> {book.customerName}</p>
 
-      <p>Boat: {book.boatName}</p>
+      <p><strong>Boat: </strong>{book.boatName}</p>
 
-      <p>Date: {new Date(book.date).toLocaleDateString("en-GB")}</p>
+      <p><strong>Status: </strong>{new Date(book.date).toLocaleDateString("en-GB")}</p>
 
-      <p>Time: {book.time}</p>
+      <p><strong>Time: </strong>{book.time}</p>
 
-      <p>Passengers: {book.passengers}</p>
+      <p><strong>Passengers:  </strong>{book.passengers}</p>
 
-      <p>Amount: ₹{book.amount}</p>
+      <p><strong>Amount:</strong> ₹{book.amount}</p>
 
-      <p>Status: {book.bookingStatus}</p>
+      <p><strong>Status: </strong>{book.bookingStatus}</p>
+      <p><strong>Seat No: </strong>{book.seatIds?.map((seat)=> seat.seatNumber).join(",")}</p>
+
+        <p><strong>Total Price:</strong> ₹{book?.amount || 0}</p>
+
       <button onClick={()=> navigate(`/admin/viewCustomer/${book.customerId._id}`)}>View Booking History</button>
     </div>
   );

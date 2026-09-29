@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import api from "../Services/api";
 import NormalAdminNavbar from "./NormalAdminNavbar";
 import "./NormalHomePage.css";
+import { useNavigate } from "react-router-dom";
 
 export default function NormalHomePage() {
   const [boats, setBoats] = useState([]);
+  const navigate = useNavigate()
 
   // Get logged-in admin
   const user = JSON.parse(localStorage.getItem("user"));
@@ -78,7 +80,7 @@ export default function NormalHomePage() {
                           permissions.includes("deleteBoat")) && (
                           <td>
                             {permissions.includes("updateBoat") && (
-                              <button>Edit</button>
+                              <button onClick={()=> navigate(`/updateBoat/${boat._id}`)}>Edit</button>
                             )}
 
                             {permissions.includes("deleteBoat") && (

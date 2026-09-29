@@ -28,7 +28,7 @@ export default function AdminCustomersPage() {
     return boat.name.toLowerCase().includes(search.toLowerCase());
   });
 
-  const handleDelete = (id) => {};
+  // const handleDelete = (id) => {};
 
   return (
     <div className="customers-page">
@@ -64,7 +64,6 @@ export default function AdminCustomersPage() {
                   <th>Name</th>
                   <th>Email</th>
                   <th>Mobile Number</th>
-                  <td></td>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -77,9 +76,10 @@ export default function AdminCustomersPage() {
                     <td>{customers.email}</td>
                     <td>{customers.mobileNumber}</td>
                     <td>
-                      <button onClick={() => handleDelete(customers._id)}>
+                      {/* <button onClick={() => handleDelete(customers._id)}>
                         Delete Customer
-                      </button>
+                      </button> */}
+                      <button onClick={()=> navigate(`/admin/sigleCustomerPage/${customers._id}`)}>View Details</button>
                     </td>
                   </tr>
                 ))}

@@ -39,7 +39,8 @@ export default function BoatDetail() {
       return;
     }
     if (boat.status !== "Booked" && boat.status !== "Maintenance") {
-      navigate(`/bookingboat/${boat._id}`);
+      // navigate(`/bookingboat/${boat._id}`);
+      navigate(`/customer/seatSelection/${boat._id}`)
     }
   };
 
