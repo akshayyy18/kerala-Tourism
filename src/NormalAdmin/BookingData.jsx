@@ -13,6 +13,8 @@ export default function BookingData() {
   const getData = async () => {
     try {
       const response = await api.get("/getAll");
+
+      console.log(response.data)
       setData(response.data.data);
     } catch (error) {
       console.log(error.message);
@@ -99,6 +101,10 @@ export default function BookingData() {
                     <strong>{booking.customerName}</strong>
                   </div>
                   <div className="booking-detail-row">
+                    <span>Email</span>
+                    <strong>{booking.customerId?.email}</strong>
+                  </div>
+                  <div className="booking-detail-row">
                     <span>Boat</span>
                     <strong>{booking.boatName}</strong>
                   </div>
@@ -119,6 +125,10 @@ export default function BookingData() {
                   <div className="booking-detail-row amount-row">
                     <span>Amount</span>
                     <strong>₹{booking.amount}</strong>
+                  </div>
+                  <div className="booking-detail-row">
+                    <span>Seat no</span>
+                    <p>{booking.seatIds?.map((seat)=> seat.seatNumber).join(",")}</p>
                   </div>
                 </div>
 

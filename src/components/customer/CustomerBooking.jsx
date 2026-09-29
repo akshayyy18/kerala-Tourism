@@ -96,7 +96,18 @@ export default function CustomerBooking() {
                       </div>
                       <div>
                         <span>Date</span>
-                        <strong>{booking.date}</strong>
+                        <strong>
+                          {booking.date
+                            ? new Date(booking.date).toLocaleDateString(
+                                "en-GB",
+                                {
+                                  day: "2-digit",
+                                  month: "short",
+                                  year: "numeric",
+                                },
+                              )
+                            : "-"}
+                        </strong>
                       </div>
                       <div>
                         <span>Time slot</span>
