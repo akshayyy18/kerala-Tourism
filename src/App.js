@@ -33,6 +33,7 @@ import CustomerPage from "./NormalAdmin/CustomerPage";
 import BookingHistory from "./NormalAdmin/BookingHistory";
 import AdminCustomerDetails from "./components/admin/AdminCustomerDetails";
 import SeatSelection from "./Pages/customer/SeatSelection";
+import IndividualHistory from "./components/customer/IndividualHistory";
 
 export default function App() {
   return (
@@ -71,6 +72,7 @@ export default function App() {
         <Route path="/admin/bookingData/:id" element={<BookingHistory/>}/>
         <Route path="/admin/sigleCustomerPage/:id" element={<AdminCustomerDetails/>}/>
         <Route path="/customer/seatSelection/:id" element={<SeatSelection/>}/>
+        <Route path="/detailsBooking/:id" element={<IndividualHistory/>}/>
       </Routes>
     </div>
   );

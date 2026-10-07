@@ -22,6 +22,8 @@ export default function ViewCustomerHistory() {
     getCustomer();
   }, [id]);
 
+
+
   return (
     <div>
       <h1>Recent Booking History</h1>
@@ -71,6 +73,7 @@ export default function ViewCustomerHistory() {
           </p>
 
           <hr />
+          {/* <button onClick={()=>handleDelete(booking._id)}>Delete History</button> */}
         </div>
       ))}
     </div>

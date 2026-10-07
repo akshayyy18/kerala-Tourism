@@ -12,7 +12,7 @@ export default function AdminProfile() {
 
   const getProfile = async () => {
     try {
-      const response = await api.get("/admin/superAdminProfile");
+      const response = await api.get("/admin/AdminProfile");
 
       console.log("Profile response:", response.data);
 

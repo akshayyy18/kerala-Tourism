@@ -113,6 +113,13 @@ export default function CustomerBooking() {
                         <span>Time slot</span>
                         <strong>{booking.time}</strong>
                       </div>
+                      <div>
+                        <span>Seat Number</span>
+                        <p>{booking.seatIds?.map((seat)=> seat.seatNumber).sort().join(",")}</p>
+                      </div>
+                      <div>
+                        <button onClick={()=>navigate(`/detailsBooking/${booking._id}`)}>View Booking</button>
+                      </div>
                     </div>
                   </article>
                 ))}

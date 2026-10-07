@@ -61,7 +61,6 @@ export default function SeatSelection() {
     }
   };
 
-
   useEffect(() => {
     fetchSeats();
   }, [id]);
@@ -147,7 +146,6 @@ export default function SeatSelection() {
           <p>Select your date, time and seats.</p>
         </header>
 
-
         <div>
           <label>Select Date</label>
 
@@ -160,7 +158,6 @@ export default function SeatSelection() {
             }}
           />
         </div>
-
 
         <div>
           <label>Select Time</label>
@@ -194,7 +191,8 @@ export default function SeatSelection() {
               </div>
 
               <span className="seat-count-label">
-                {seats.length} {seats.length === 1 ? "seat" : "seats"}
+                {seats.length - bookedSeats.length}{" "}
+                {seats.length - bookedSeats.length === 1 ? "Seat" : "Availability Seats"}
               </span>
             </div>
 
@@ -206,7 +204,6 @@ export default function SeatSelection() {
               <>
                 <div className="seat-grid">
                   {seats.map((seat) => {
-
                     const isBooked = bookedSeats.some(
                       (bookedSeatId) =>
                         bookedSeatId.toString() === seat._id.toString(),
